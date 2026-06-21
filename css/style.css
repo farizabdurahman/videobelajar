@@ -1,0 +1,547 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-categories ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-categories a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-categories a.active {
+  color: #E53935;
+}
+
+.nav-categories a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #E53935;
+}
+
+.avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Progress Steps */
+.progress-steps ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.progress-steps li {
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid #ccc;
+  color: #777;
+}
+
+.progress-steps li.active {
+  border-bottom: 2px solid #E53935;
+  color: #E53935;
+  font-weight: bold;
+}
+
+/* Course Cards */
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.course-card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 200px;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem 2rem;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav a {
+  margin: 0 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.avatar img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.course-nav {
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.course-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.course-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+}
+
+.course-nav a.active {
+  color: #E53935; /* merah untuk aktif */
+}
+
+.course-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background: #E53935; /* underline merah */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;   /* rata tengah horizontal */
+  align-items: center;       /* rata tengah vertical */
+  text-align: center;
+  min-height: 500px;
+
+  /* panggil gambar background */
+  background: url("../images/belajar.png") no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4); /* overlay gelap transparan */
+}
+
+.hero-text {
+  position: relative;        /* supaya teks di atas overlay */
+  max-width: 700px;
+  color: #fff;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Courses Section */
+.courses {
+  padding: 2rem;
+  text-align: center;
+}
+
+.courses h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #0D47A1;
+}
+
+.courses p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.categories button {
+  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.categories button:hover {
+  background: #bbb;
+}
+
+.categories .active {
+  background: #4CAF50;
+  color: white;
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+  grid-auto-rows: auto;                  /* tinggi baris otomatis */
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.course-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* gambar proporsional */
+}
+
+.course-title {
+  font-size: 1.2rem;
+  margin: 0.8rem 0 0.4rem;
+  color: #0D47A1;
+  font-weight: 600;
+}
+
+.course-desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.course-rating {
+  font-size: 0.9rem;
+  color: #FFC107; /* warna emas untuk bintang */
+  margin-bottom: 0.5rem;
+}
+
+.course-price {
+  font-weight: bold;
+  color: #FF5722;
+  margin-top: auto; /* dorong ke bawah */
+  padding: 0.8rem;
+  background: #fbe9e7;
+  border-top: 1px solid #eee;
+}
+
+/* Newsletter */
+.newsletter {
+  background: url("../images/newsletter.png") no-repeat center center;
+  background-size: cover;       /* gambar memenuhi area */
+  padding: 8rem 3rem;
+  text-align: center;
+  color: #fff;                  /* teks putih agar kontras */
+  position: relative;
+}
+
+.newsletter::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);  /* overlay gelap transparan */
+}
+
+.newsletter h2,
+.newsletter p,
+.newsletter form {
+  position: relative;           /* supaya teks di atas overlay */
+  z-index: 1;
+}
+
+.newsletter input {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  width: 250px;
+  margin-right: 0.5rem;
+}
+
+.newsletter button {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  background: #FF9800;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-subscribe {
+  background: #FF9800;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Footer */
+.footer {
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-info img {
+  height: 30px;
+  width: auto;
+  margin-bottom: 0.5rem;
+}
+
+.footer h4 {
+  margin-bottom: 0.5rem;
+  color: #FFD600;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 0.3rem;
+}
+
+.footer a {
+  color: #FFD600;
+  text-decoration: none;
+}
+
+.footer-social .social-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.footer-social .social-links img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.footer-social .social-links img:hover {
+  transform: scale(1.1);
+}
+
+/* Login & Register Form */
+.login-container, .register-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.login-container h2, .register-container h2 {
+  margin-bottom: 0.5rem;
+  color: #0D47A1;
+}
+
+.subtext {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.forgot {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #0D47A1;
+  text-decoration: none;
+}
+
+/* Tombol Daftar */
+.btn-primary {
+  background-color: #4CAF50; /* hijau */
+  color: white;
+  border: none;
+  padding: 0.8rem;          /* tinggi tombol */
+  margin-top: 1rem;
+  width: 100%;              /* penuh */
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  box-sizing: border-box;   /* pastikan padding tidak bikin beda ukuran */
+}
+
+/* Tombol Masuk */
+.btn-secondary {
+  background-color: #81C784; /* hijau muda */
+  color: white;
+  border: none;
+  padding: 0.5rem;          /* samakan dengan btn-primary */
+  margin-top: 0.5rem;
+  width: 100%;              /* penuh */
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  box-sizing: border-box;   /* pastikan padding tidak bikin beda ukuran */
+}
+
+.divider {
+  text-align: center;
+  margin: 1rem 0;
+  color: #999;
+}
+
+.btn-google {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.btn-google img {
+  height: 20px;
+  width: auto;
+  margin-right: 8px;
+}
+
+.register-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.phone-field {
+  display: flex;
+  align-items: center;
+}
+
+.country-code {
+  background: #eee;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.phone-field input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0 4px 4px 0;
+}

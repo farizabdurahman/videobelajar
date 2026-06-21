@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - Videobelajar</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <img src="images/logo.png" alt="Videobelajar Logo">
+    </div>
+  </header>
+
+  <!-- Kontainer Register -->
+  <main class="register-container">
+    <h2>Pendaftaran Akun</h2>
+    <p class="subtext">Yuk, daftarkan akunmu sekarang juga!</p>
+
+    <form id="registerForm">
+      <label for="fullname">Nama Lengkap *</label>
+      <input type="text" id="fullname" placeholder="Masukkan nama lengkap" required>
+
+      <label for="email">E-Mail *</label>
+      <input type="email" id="email" placeholder="Masukkan email" required>
+
+      <label for="phone">No. Hp *</label>
+      <div class="phone-field">
+        <span class="country-code">+62</span>
+        <input type="tel" id="phone" placeholder="8123456789" required>
+      </div>
+
+      <label for="password">Kata Sandi *</label>
+      <input type="password" id="password" placeholder="Masukkan kata sandi" required>
+
+      <label for="confirm-password">Konfirmasi Kata Sandi *</label>
+      <input type="password" id="confirm-password" placeholder="Ulangi kata sandi" required>
+
+      <a href="#" class="forgot">Lupa Password?</a>
+
+      <button type="submit" class="btn-primary">Daftar</button>
+      <a href="login.html" class="btn-secondary">Masuk</a>
+
+      <div class="divider">atau</div>
+
+      <button type="button" class="btn-google">
+        <img src="images/google.png" alt="Google Logo" class="google-icon">
+        Daftar dengan Google
+      </button>
+    </form>
+  </main>
+
+  <script src="js/register.js"></script>
+</body>
+</html>
